@@ -1,9 +1,9 @@
 import {Screen} from './Screen';
 
-export interface RendererInterface {
+export interface Renderer {
     screen: Screen;
-    create: () => void;
-    
+    create: (width: number, height: number) => void;
+
     canvas: any;
     context: any;
 }
