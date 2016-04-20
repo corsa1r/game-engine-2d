@@ -38,8 +38,8 @@ var EventsEmitter = (function () {
         return this;
     };
     EventsEmitter.prototype.emit = function (name, param1, param2, options) {
-        if (param1 === void 0) { param1 = undefined; }
-        if (param2 === void 0) { param2 = undefined; }
+        if (param1 === void 0) { param1 = void 0; }
+        if (param2 === void 0) { param2 = void 0; }
         if (options === void 0) { options = {}; }
         if (this.events[name]) {
             this.each(name, function (event) {

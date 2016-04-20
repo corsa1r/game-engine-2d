@@ -1,13 +1,3 @@
-import {GameLoop} from './engine/time/GameLoop';
+import {CanvasRenderer} from './engine/renderers/CanvasRenderer';
 
-let loop = new GameLoop();
-
-loop.on('tick', (delta: number) => {
-    console.log('delta is:', delta);
-});
-
-loop.start();
-
-setInterval(() => {
-    loop.stop();
-}, 3000);
+let renderer = new CanvasRenderer();

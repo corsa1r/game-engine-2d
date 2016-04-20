@@ -85,7 +85,7 @@ export class EventsEmitter {
      * 
      * return self instance
      */
-    emit(name: string, param1: any = undefined, param2: any = undefined, options: Object = {}) {
+    emit(name: string, param1: any = void 0, param2: any = void 0, options: Object = {}) {
         if (this.events[name]) {
             this.each(name, (event: EventInterface) => {
                 event.callback(param1, param2, options);
